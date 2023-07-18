@@ -10,7 +10,7 @@
    <img src="https://user-images.githubusercontent.com/20729864/87876394-8beda800-c9f5-11ea-8ee6-5a96411f3007.png" width="250" height="480">
    
    
-#  What We Used
+#  What I Used
    
    -  Kotlin Coroutines for performing the DB and background operations
    -  Foreground service for streaming music even when the application is in the background
@@ -20,12 +20,3 @@
    -  Use of exoPlayer library for music streaming
    -  Firebase for login feature
    
-#  Requirements
-   
-   Android 5.0 or higher
-   
-#  References
-   
-   - https://exoplayer.dev/playlists.html (ExoPlayer Playlist feature)
-   - https://medium.com/androiddevelopers/7-steps-to-room-27a5fe5f99b2 (RoomDB)
-   - https://stackoverflow.com/questions/52473974/binding-playerview-with-simpleexoplayer-from-a-service (ExoPlayer with Service)
