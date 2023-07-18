@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/audio_player_main_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <com.google.android.exoplayer2.ui.PlaybackControlView
+            android:id="@+id/exo_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:auto_show="true"
+            app:shutter_background_color="@android:color/transparent"
+            app:controller_layout_id="@layout/audio_bottom_sheet_controller_view"
+            app:hide_on_touch="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:player_layout_id="@layout/audio_bottom_sheet_player_view"
+            app:resize_mode="fixed_height"
+            app:show_buffering="always"
+            app:show_timeout="0"
+            app:use_controller="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

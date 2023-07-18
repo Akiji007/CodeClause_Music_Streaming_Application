@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/bg_home_background">
+
+        <FrameLayout
+            android:id="@+id/default_playing_song_fl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/songs_rv_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/default_playing_song_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_default_playing_song" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/music_lib_frag_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageView
+                android:id="@+id/toolbar_home_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="6dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_menu_home"
+                android:tint="@color/white" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolbar_title_text_appearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:ellipsize="marquee"
+            android:maxEms="10"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="@string/music_library_toolbar_title"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/music_lib_frag_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolbar_subtitle"
+            style="@style/toolbar_title_text_appearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:ellipsize="marquee"
+            android:maxEms="15"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:textSize="@dimen/toolbar_subtitle_text_size"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/music_lib_frag_toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/player_control_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/song_control_barrier">
+
+            <com.google.android.exoplayer2.ui.PlaybackControlView
+                android:id="@+id/exo_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:auto_show="true"
+                app:controller_layout_id="@layout/layout_song_controls"
+                app:hide_on_touch="false"
+                app:player_layout_id="@layout/audio_bottom_sheet_player_view"
+                app:resize_mode="fixed_height"
+                app:show_buffering="always"
+                app:show_timeout="0"
+                app:use_controller="true"
+                android:layout_marginTop="60dp"
+                android:padding="4dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/default_play_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_circle_48dp"
+            android:tint="@color/white"
+            android:layout_marginTop="60dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/song_control_barrier" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/playing_song_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="toolbar_subtitle,default_playing_song_fl" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/songs_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/song_item_spacing_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/songs_rv_barrier" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/song_control_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="music_lib_frag_toolbar,toolbar_subtitle" />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/songs_rv_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="music_lib_frag_toolbar,player_control_rl,default_play_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

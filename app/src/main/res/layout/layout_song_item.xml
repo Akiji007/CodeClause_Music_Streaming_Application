@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="songItem"
+            type="com.example.singmetoo.appSingMe2.mUtils.songsRepository.SongModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/song_item_card_height"
+        android:layout_marginStart="@dimen/song_item_card_margin"
+        android:layout_marginEnd="@dimen/song_item_card_margin"
+        app:cardBackgroundColor="@color/song_item_card_bg_color"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_view_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/song_iv"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="@dimen/base_margin_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/song_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="marquee"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:text="@{songItem.songTitle}"
+                android:textColor="@color/song_item_color"
+                android:textSize="@dimen/song_item_title_text_size"
+                app:layout_constraintBottom_toTopOf="@+id/song_artist_tv"
+                app:layout_constraintEnd_toStartOf="@+id/song_duration_tv"
+                app:layout_constraintStart_toEndOf="@+id/song_iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/song_artist_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="marquee"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:text="@{songItem.songArtist}"
+                android:textColor="@color/song_item_artist_text_color"
+                android:textSize="@dimen/song_item_artist_text_size"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/song_duration_tv"
+                app:layout_constraintStart_toEndOf="@+id/song_iv"
+                app:layout_constraintTop_toBottomOf="@+id/song_title_tv" />
+
+            <ImageView
+                android:id="@+id/song_duration_tv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:layout_marginEnd="12dp"
+                android:tint="@color/white"
+                android:src="@drawable/ic_menu_about"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

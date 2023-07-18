@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+    <color name="base_app_icon_color">#ffa500</color>
+    <color name="bg_gradient_start_color">#4687A5</color>
+    <color name="bg_gradient_end_color">#195671</color>
+    <color name="navigation_view_color">#DCD9D5</color>
+    <color name="song_item_color">@color/white</color>
+    <color name="song_item_card_bg_color">@android:color/transparent</color>
+    <color name="song_item_artist_text_color">#BFBBBB</color>
+    <color name="bg_song_item_playing">#7E6130</color>
+
+    <!-- Player -->
+    <color name="color_played">#FF5F46F4</color>
+    <color name="color_buffered">#1F5F46F4</color>
+    <color name="color_unplayed">#FFBEBEBE</color>
+    <color name="bg_player">#434343</color>
+    <color name="bg_audio_player_preview">#454C75</color>
+</resources>

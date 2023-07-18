@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">SingWithUs</string>
+    <string name="get_started_text">\"Sing with us\"</string>
+    <string name="app_moto_text">Bang That Beat</string>
+    <string name="skip_text">Skip</string>
+    <string name="home_toolbar_title">Home</string>
+    <string name="music_library_toolbar_title">Music Library</string>
+    <string name="music_library_toolbar_subtitle">Music</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_your_music">Your Music</string>
+    <string name="menu_playlist">Playlist</string>
+    <string name="menu_about">About</string>
+    <string name="menu_item_other">Other</string>
+    <string name="menu_item_login">Login</string>
+    <string name="menu_item_logout">Logout</string>
+    <string name="home_item_music_title">Music</string>
+    <string name="home_item_about_us">About Us</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="about_us_contact_text">Contact With Us</string>
+    <string name="about_us_developer_name">Himanshu Yadav</string>
+    <string name="about_us_contact_linkedIn">LinkedIn : linkedin.com/in/himanshu-yadav-5419bb120</string>
+    <string name="about_us_contact_email">Email : himanshu24yadav@gmail.com</string>
+    <string name="about_us_text">singWithUs is a music streaming application that offers to listen to songs
+    closest to your heart. It lets you choose from your local storage and play.</string>
+
+    //music service
+    <string name="playback_channel_name">Now Playing</string>
+    <string name="loading_dots">…</string>
+    <string name="playback_uri_was_not_set">Playback uri was not set</string>
+    <string name="player_default_title">Unknown</string>
+</resources>

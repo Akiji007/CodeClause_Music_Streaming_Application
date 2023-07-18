@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">80dp</dimen>
+    <dimen name="playing_header_height">164dp</dimen>
+    <dimen name="toolbar_height">58dp</dimen>
+    <dimen name="base_margin_horizontal">16dp</dimen>
+
+    //audio player
+    <dimen name="audio_player_preview_height">64dp</dimen>
+    <dimen name="player_height">96dp</dimen>
+    <dimen name="player_overlay_peek_height">61dp</dimen>
+    <dimen name="player_overlay_placeholder_height">56dp</dimen>
+    <dimen name="player_padding">16dp</dimen>
+    <dimen name="player_icon_padding">6dp</dimen>
+
+
+    <dimen name="nav_text_size">13sp</dimen>
+    <dimen name="toolbar_title_text_size">16sp</dimen>
+    <dimen name="toolbar_subtitle_text_size">12sp</dimen>
+    <dimen name="item_spacing_top">64dp</dimen>
+    <dimen name="item_spacing_left">0dp</dimen>
+    <dimen name="song_item_spacing_top">8dp</dimen>
+    <dimen name="song_item_title_text_size">13sp</dimen>
+    <dimen name="song_item_artist_text_size">11sp</dimen>
+    <dimen name="song_item_card_margin">8dp</dimen>
+    <dimen name="song_item_card_height">64dp</dimen>
+</resources>
